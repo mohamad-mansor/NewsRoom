@@ -17,8 +17,9 @@ function NewsBoard({ category, searchTerm }) {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setArticles(data.articles);
+        if (data.articles) {
+          setArticles(data.articles);
+        }
       })
       .catch((error) => {
         console.log(error);
