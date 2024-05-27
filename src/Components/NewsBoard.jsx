@@ -24,7 +24,8 @@ function NewsBoard({ category, searchTerm }) {
       <h2 className="news-title text-center">
         Latest <span className="news-badge">News</span>
       </h2>
-      <div className="row">
+      <p>hello world</p>
+      {/* <div className="row">
         {articles.map((news, index) => (
           <div className="col-md-4" key={index}>
             <NewsItem
@@ -35,7 +36,7 @@ function NewsBoard({ category, searchTerm }) {
             />
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
