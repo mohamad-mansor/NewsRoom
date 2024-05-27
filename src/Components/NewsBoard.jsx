@@ -18,6 +18,10 @@ function NewsBoard({ category, searchTerm }) {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        setArticles(data.articles);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }, [category, searchTerm]);
 
@@ -27,7 +31,7 @@ function NewsBoard({ category, searchTerm }) {
         Latest <span className="news-badge">News</span>
       </h2>
       <p>hello world</p>
-      {/* <div className="row">
+      <div className="row">
         {articles.map((news, index) => (
           <div className="col-md-4" key={index}>
             <NewsItem
@@ -38,7 +42,7 @@ function NewsBoard({ category, searchTerm }) {
             />
           </div>
         ))}
-      </div> */}
+      </div>
     </div>
   );
 }
